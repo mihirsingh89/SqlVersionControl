@@ -6,7 +6,8 @@ CREATE TABLE [Customer].[Person]
 [MiddleName] [varchar] (40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [LastName] [varchar] (40) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 [Suffix] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF__Person__Modified__24927208] DEFAULT (getdate())
+[ModifiedDate] [datetime] NOT NULL CONSTRAINT [DF__Person__Modified__24927208] DEFAULT (getdate()),
+[DOB] [datetime] NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [Customer].[Person] ADD CONSTRAINT [PK__Person__543B44875B65BCDE] PRIMARY KEY CLUSTERED  ([person_ID]) ON [PRIMARY]
